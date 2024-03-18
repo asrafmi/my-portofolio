@@ -1,17 +1,10 @@
-$dark-grey: #4b5563;
-$light-grey: #f3f4f6;
-$donker-blue: #111827;
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
+@import '../../index.scss';
 
 .header {
   @extend .flex-row;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 70px;
+  padding: 15px 90px;
 }
 
 .menuContainer {
@@ -60,6 +53,25 @@ a:hover:after {
   }
 }
 
+.sunIcon {
+  @extend .themeIconSize;
+}
+
+.moonIcon {
+  @extend .themeIconSize;
+  color: $dark-grey;
+}
+
+.sunIcon:hover {
+  color: $dark-grey;
+  cursor: pointer;
+}
+
+.moonIcon:hover {
+  color: $light-grey;
+  cursor: pointer;
+}
+
 .downloadBtn {
   border-radius: 12px;
   background-color: $donker-blue;
@@ -67,4 +79,9 @@ a:hover:after {
   height: 36px;
   border: none;
   cursor: pointer;
+
+  p {
+    margin: 0;
+    color: white;
+  }
 }

@@ -1,0 +1,43 @@
+$dark-grey: #4b5563;
+$light-grey: #f3f4f6;
+$donker-blue: #111827;
+$white: #ffffff;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  background-color: $white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.themeIconSize {
+  height: 35px;
+  width: 35px;
+}
+
+.iconSize {
+  height: 24px;
+  width: 24px;
+}
+
+p {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: $dark-grey;
+}

@@ -1,10 +1,6 @@
 import { useState } from 'react';
-import {
-  ChevronRightIcon,
-  MoonIcon,
-  SunIcon,
-} from '@heroicons/react/24/outline';
-import styles from './header.module.scss';
+import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
+import styles from './Header.module.scss';
 
 const Header = () => {
   const [isLight, setIsLight] = useState(true);
@@ -37,15 +33,17 @@ const Header = () => {
           {isLight ? (
             <SunIcon
               onClick={() => setIsLight(!isLight)}
-              style={{ height: 35, width: 35 }}
+              className={styles.sunIcon}
             />
           ) : (
             <MoonIcon
               onClick={() => setIsLight(!isLight)}
-              style={{ height: 35, width: 35 }}
+              className={styles.moonIcon}
             />
           )}
-          <button className={styles.downloadBtn}>Download CV</button>
+          <button className={styles.downloadBtn}>
+            <p>Download CV</p>
+          </button>
         </div>
       </div>
     </header>

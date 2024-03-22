@@ -22,34 +22,14 @@ const Hero = () => {
             </p>
           </div>
           <div className={styles.locationContainer}>
-            {/* <table className={styles.locationWrapper}>
-              <tr>
-                <th>
-                  <MapPinIcon className={styles.locationIcon} />
-                </th>
-                <th style={{ color: 'red' }}>Bandung, Indonesia</th>
-              </tr>
-              <tr>
-                <td>
-                  <div className={styles.dot}></div>
-                </td>
-                <td style={{ color: 'red' }}>Available for new projects</td>
-              </tr>
-            </table> */}
-            <table>
-              <tr>
-                <th style={{ color: 'red' }}>
-                  <MapPinIcon className={styles.locationIcon} />
-                </th>
-                <th style={{ color: 'red' }}>Bandung, Indonesia</th>
-              </tr>
-              <tr>
-                <td style={{ color: 'red' }}>
-                  <div className={styles.dot}></div>
-                </td>
-                <td style={{ color: 'red' }}>Available for new projects</td>
-              </tr>
-            </table>
+            <div className={styles.iconContainer}>
+              <MapPinIcon className={styles.locationIcon} />
+              <div className={styles.dot}></div>
+            </div>
+            <div className={styles.textContainer}>
+              <p className={styles.locationText}>Bandung, Indonesia</p>
+              <p className={styles.locationText}>Available for new projects</p>
+            </div>
           </div>
           <div className={styles.socialWrapper}>
             <img src="/icons/github.png" alt="github" />

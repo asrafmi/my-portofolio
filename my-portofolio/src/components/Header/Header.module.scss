@@ -5,83 +5,116 @@
   align-items: center;
   justify-content: space-between;
   padding: 15px 90px;
-}
 
-.menuContainer {
-  @extend .flex-row;
-  align-items: center;
-  gap: 50px;
-}
+  .menuContainer {
+    @extend .flex-row;
+    align-items: center;
+    gap: 50px;
+  }
 
-.listMenu {
-  @extend .flex-row;
-  gap: 50px;
-  list-style-type: none;
-}
+  .listMenu {
+    @extend .flex-row;
+    gap: 50px;
+    list-style-type: none;
+  }
 
-.downloadContainer {
-  @extend .flex-row;
-  align-items: center;
-  gap: 30px;
-}
+  .downloadContainer {
+    @extend .flex-row;
+    align-items: center;
+    gap: 30px;
+  }
 
-li a {
-  text-decoration: none;
-  color: $dark-grey;
-}
+  li a {
+    text-decoration: none;
+    color: $dark-grey;
+  }
 
-a:after {
-  display: block;
-  content: '';
-  border-bottom: solid 3px $donker-blue;
-  transform: scaleX(0);
-  transition: transform 250ms ease-in-out;
-  transform-origin: 0% 50%;
-}
+  a:after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px $donker-blue;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    transform-origin: 0% 50%;
+  }
 
-a:hover:after {
-  transform: scaleX(1);
-}
+  a:hover:after {
+    transform: scaleX(1);
+  }
 
-.hrWrapper {
-  width: 100%;
-  hr {
-    background-color: $light-grey;
-    height: 2px;
-    border: 0;
-    transform: rotate(90deg);
+  .hrWrapper {
+    width: 100%;
+    hr {
+      background-color: $light-grey;
+      height: 2px;
+      border: 0;
+      transform: rotate(90deg);
+    }
+  }
+
+  .sunIcon {
+    @extend .themeIconSize;
+  }
+
+  .moonIcon {
+    @extend .themeIconSize;
+    color: $dark-grey;
+  }
+
+  .sunIcon:hover {
+    color: $dark-grey;
+    cursor: pointer;
+  }
+
+  .moonIcon:hover {
+    color: $light-grey;
+    cursor: pointer;
+  }
+
+  .downloadBtn {
+    border-radius: 12px;
+    background-color: $donker-blue;
+    width: 136px;
+    height: 36px;
+    border: none;
+    cursor: pointer;
+
+    p {
+      margin: 0;
+      color: white;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .menuContainer {
+      display: none;
+    }
+    .barsIcon {
+      height: 24px;
+      width: 24px;
+      color: $dark-grey;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    .drawerIconContainer {
+      display: none;
+    }
   }
 }
 
-.sunIcon {
-  @extend .themeIconSize;
+.drawerContainer {
+  padding: 20px;
 }
 
-.moonIcon {
-  @extend .themeIconSize;
-  color: $dark-grey;
+@media screen and (min-width: 1400px) {
+  .header {
+    padding: 15px 250px;
+  }
 }
 
-.sunIcon:hover {
-  color: $dark-grey;
-  cursor: pointer;
-}
-
-.moonIcon:hover {
-  color: $light-grey;
-  cursor: pointer;
-}
-
-.downloadBtn {
-  border-radius: 12px;
-  background-color: $donker-blue;
-  width: 136px;
-  height: 36px;
-  border: none;
-  cursor: pointer;
-
-  p {
-    margin: 0;
-    color: white;
+@media screen and (max-width: 640px) {
+  .header {
+    padding: 15px 50px;
   }
 }

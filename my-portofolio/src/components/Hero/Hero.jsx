@@ -1,16 +1,57 @@
+import { Tilt } from 'react-tilt';
+import { motion } from 'framer-motion';
 import { MapPinIcon } from '@heroicons/react/24/outline';
 import styles from './Hero.module.scss';
 
 const Hero = () => {
+  const defaultOptions = {
+    reverse: false, // reverse the tilt direction
+    max: 35, // max tilt rotation (degrees)
+    perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets.
+    scale: 1.1, // 2 = 200%, 1.5 = 150%, etc..
+    speed: 1000, // Speed of the enter/exit transition
+    transition: true, // Set a transition on enter/exit.
+    axis: null, // What axis should be disabled. Can be X or Y.
+    reset: true, // If the tilt effect has to be reset on exit.
+    easing: 'cubic-bezier(.03,.98,.52,.99)', // Easing on enter/exit.
+  };
   return (
     <section className={styles.hero}>
       <div className={styles.heroContainer}>
-        <div className={styles.imgContainer}>
-          <div className={styles.avatarWrapper}>
-            <img src="/avatar.jpeg" alt="avatar" className={styles.avatar} />
-          </div>
-        </div>
-        <div className={styles.descriptionContainer}>
+        <Tilt options={defaultOptions}>
+          <motion.div
+            initial={{
+              y: 300,
+              opacity: 0,
+            }}
+            transition={{
+              duration: 1.2,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            className={styles.imgContainer}
+          >
+            <div className={styles.avatarWrapper}>
+              <img src="/avatar.jpeg" alt="avatar" className={styles.avatar} />
+            </div>
+          </motion.div>
+        </Tilt>
+        <motion.div
+          initial={{
+            y: 300,
+            opacity: 0,
+          }}
+          transition={{
+            duration: 1.2,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          className={styles.descriptionContainer}
+        >
           <div className={styles.descriptionWrapper}>
             <h1 className={styles.titleDescription}>Hi, I'm Asraf 👋</h1>
             <p className={styles.textDescription}>
@@ -36,7 +77,7 @@ const Hero = () => {
             <img src="/icons/twitter.png" alt="twitter" />
             <img src="/icons/figma.png" alt="figma" />
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

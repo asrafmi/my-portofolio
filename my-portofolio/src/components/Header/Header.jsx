@@ -25,10 +25,10 @@ const Header = () => {
           <div className={styles.listMenuContainer}>
             <ul className={styles.listMenu}>
               <li>
-                <a href="/">About</a>
+                <a href="#about">About</a>
               </li>
               <li>
-                <a href="/">Work</a>
+                <a href="#skill">Skills</a>
               </li>
               <li>
                 <a href="/">Testimonials</a>
@@ -77,10 +77,10 @@ const Header = () => {
           <div className={styles.listMenuContainer}>
             <ul className={styles.listMenu}>
               <li>
-                <a href="/">About</a>
+                <a href="#about">About</a>
               </li>
               <li>
-                <a href="/">Work</a>
+                <a href="#skill">Skill</a>
               </li>
               <li>
                 <a href="/">Testimonials</a>

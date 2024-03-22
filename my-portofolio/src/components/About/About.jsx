@@ -1,6 +1,7 @@
 import { Tilt } from 'react-tilt';
 import { motion } from 'framer-motion';
 import styles from './About.module.scss';
+import Chip from '../Chip/Chip';
 
 const About = () => {
   const defaultOptions = {
@@ -16,11 +17,7 @@ const About = () => {
   };
   return (
     <section className={styles.about}>
-      <div className={styles.aboutChipContainer}>
-        <div className={styles.aboutChipWrapper}>
-          <p>About</p>
-        </div>
-      </div>
+      <Chip title="About" />
       <div className={styles.aboutContainer}>
         <Tilt options={defaultOptions}>
           <motion.div

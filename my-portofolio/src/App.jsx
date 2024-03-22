@@ -3,6 +3,7 @@ import Header from './components/Header/Header';
 import { Outlet } from 'react-router';
 import Hero from './components/Hero/Hero';
 import About from './components/About/About';
+import Skill from './components/Skill/Skill.jsx';
 
 function App() {
   return (
@@ -10,8 +11,16 @@ function App() {
       <Header />
       {/* Section hero*/}
       <Hero />
+
       {/* Section about */}
-      <About />
+      <section id="about">
+        <About />
+      </section>
+
+      {/* Section skills */}
+      <section id="skill">
+        <Skill />
+      </section>
       <div>
         <Outlet />
       </div>

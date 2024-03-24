@@ -37,12 +37,10 @@ $white: #ffffff;
 .iconSize {
   height: 24px;
   width: 24px;
+  cursor: pointer;
 }
 
 p {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   color: $dark-grey;
-}
-
-section {
 }

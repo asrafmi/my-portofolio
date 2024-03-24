@@ -1,16 +1,15 @@
-.aboutChipContainer {
+.chipContainer {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  .aboutChipWrapper {
+  .chipWrapper {
     display: flex;
     padding: 4px 20px;
     justify-content: center;
     align-items: center;
     border-radius: 12px;
     background: var(--Gray-200, #e5e7eb);
-    margin-bottom: 100px;
     height: 20px;
   }
 }

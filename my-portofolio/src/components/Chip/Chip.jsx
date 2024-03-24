@@ -3,8 +3,8 @@ import styles from './Chip.module.scss';
 
 const Chip = (props) => {
   return (
-    <div className={styles.aboutChipContainer}>
-      <div className={styles.aboutChipWrapper}>
+    <div className={styles.chipContainer}>
+      <div className={styles.chipWrapper}>
         <p>{props.title}</p>
       </div>
     </div>

@@ -3,10 +3,12 @@
 .about {
   padding: 90px 90px;
   background-color: #f9fafb;
+  margin-top: 100px;
 
   .aboutContainer {
     @extend .flex-col;
     gap: 50px;
+    margin-top: 80px;
   }
 
   .imgContainer {

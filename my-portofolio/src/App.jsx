@@ -1,20 +1,55 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
+import './App.scss';
 import Header from './components/Header/Header';
 import { Outlet } from 'react-router';
+import Hero from './components/Hero/Hero';
+import About from './components/About/About';
+import Skill from './components/Skill/Skill.jsx';
+import Experience from './components/Experience/Experience.jsx';
+import Work from './components/Work/Work.jsx';
+import Testimonial from './components/Testimonial/Testimonial.jsx';
+import GetInTouch from './components/GetInTouch/GetInTouch.jsx';
+import Footer from './components/Footer/Footer.jsx';
 
 function App() {
   return (
     <>
       <Header />
-
       {/* Section hero*/}
-      <section>hero</section>
+      <Hero />
 
       {/* Section about */}
-      <section>about</section>
+      <section id="about">
+        <About />
+      </section>
+
+      {/* Section skills */}
+      <section id="skill">
+        <Skill />
+      </section>
+
+      {/* Section experience */}
+      <section id="experience">
+        <Experience />
+      </section>
+
+      {/* Section work */}
+      <section id="work">
+        <Work />
+      </section>
+
+      {/* Section testimonial */}
+      <section id="testimonial">
+        <Testimonial />
+      </section>
+
+      {/* Section get in touch */}
+      <section id="getInTouch">
+        <GetInTouch />
+      </section>
+
+      <section id="footer">
+        <Footer />
+      </section>
 
       <div>
         <Outlet />

@@ -8,7 +8,6 @@ import {
 
 const GetInTouch = () => {
   const copyToClipboard = (text) => {
-    console.log('text', text);
     navigator.clipboard.writeText(text);
   };
   return (
@@ -21,7 +20,9 @@ const GetInTouch = () => {
         </p>
         <div className={styles.contactContainer}>
           <div className={styles.emailWrapper}>
-            <EnvelopeIcon className={styles.mailIcon} />
+            <a href="mailto:asraf.muhammad07@gmail.com">
+              <EnvelopeIcon className={styles.mailIcon} />
+            </a>
             <p className={styles.email}>asraf.muhammad07@gmail.com</p>
             <Square2StackIcon
               onClick={() => copyToClipboard('asraf.muhammad07@gmail.com')}

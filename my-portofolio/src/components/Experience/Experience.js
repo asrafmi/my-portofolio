@@ -1,3 +1,5 @@
+import Upwork from '../../assets/experiences/logo-upwork.png';
+
 export const experience = {
   title: 'Experience',
   description: 'My experience in the field of software development:',
@@ -7,6 +9,7 @@ export const experience = {
       position: 'Frontend Developer',
       company: 'PT. Bumi Teknologi',
       date: '2021 - Present',
+      img: Upwork,
       description: [
         {
           id: 1,
@@ -27,6 +30,7 @@ export const experience = {
       position: 'Backend Developer',
       company: 'PT. Bumi Teknologi',
       date: '2021 - Present',
+      img: Upwork,
       description: [
         {
           id: 1,
@@ -47,6 +51,7 @@ export const experience = {
       position: 'Fullstack Developer',
       company: 'PT. Bumi Teknologi',
       date: '2021 - Present',
+      img: Upwork,
       description: [
         {
           id: 1,

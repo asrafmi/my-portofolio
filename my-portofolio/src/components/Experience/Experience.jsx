@@ -1,6 +1,6 @@
+import { motion } from 'framer-motion';
 import styles from './Experience.module.scss';
 import Chip from '../Chip/Chip';
-import Upwork from '../../assets/experiences/logo-upwork.png';
 import { experience } from './Experience';
 
 const Experience = () => {
@@ -11,25 +11,38 @@ const Experience = () => {
         <p className={styles.descriptionText}>{experience.description}</p>
         <div className={styles.listExperienceContainer}>
           {experience.list.map((item) => (
-            <div key={item.id} className={styles.experienceCard}>
+            <motion.div
+              initial={{
+                y: 200,
+                opacity: 0,
+              }}
+              transition={{ duration: 1 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              key={item.id}
+              className={styles.experienceCard}
+            >
               <img
-                src={Upwork}
-                alt="experience-logo"
+                src={item.img}
+                alt={item.company}
                 className={styles.experienceLogo}
               />
               <div className={styles.experienceCardWrapper}>
                 <p className={styles.timeRange}>{item.date}</p>
-                <div>
+                <div className={styles.descriptionCardWrapper}>
                   <p className={styles.position}>{item.position}</p>
-
                   <ul className={styles.listDescription}>
                     {item.description.map((desc) => (
-                      <li key={desc.id}>{desc.text}</li>
+                      <li key={desc.id} className={styles.description}>
+                        {desc.text}
+                      </li>
                     ))}
                   </ul>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
